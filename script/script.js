@@ -41,3 +41,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+  const lightbox = document.getElementById('lightbox');
+  const iframe = lightbox.querySelector('iframe');
+  const close = lightbox.querySelector('.close');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const videoId = card.getAttribute('data-video');
+      const platform = card.getAttribute('data-platform');
+
+      let videoUrl = '';
+
+      if (platform === 'youtube') {
+        videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      }
+
+      if (platform === 'vimeo') {
+        videoUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+      }
+
+      iframe.src = videoUrl;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  function closeLightbox() {
+    iframe.src = '';
+    lightbox.style.display = 'none';
+  }
+
+  close.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+});

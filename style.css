@@ -282,7 +282,7 @@ footer {
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 25px;
 
   background: color-mix(in srgb, var(--title) 70%, transparent);
   border-radius: 50px;
@@ -315,13 +315,16 @@ footer {
 
 .card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   padding-top: 0;
   overflow: hidden;
   margin-top: 80px;
 }
-
+.card.reverse {
+  flex-direction: row-reverse;
+  text-align: justify;
+}
 .card:hover {
   transform: translateY(-5px);
 }
@@ -333,10 +336,12 @@ footer {
   display: block;
   margin: 0;
   object-fit: contain;
+  
 }
 .card-image {
   flex: 1;
   position: relative;
+  flex-shrink: 0;
 }
 
 .card-text {
@@ -526,13 +531,16 @@ footer {
 .grid-vertical{
   display:grid;
   grid-template-columns:repeat(2,1fr);
+  align-items: center;
   gap:20px;
   margin-top:30px;
+  max-height: 10%;
 }
 .grid-vertical .card{
   display:flex;
   flex-direction:column;
   gap:20px;
+  margin-top: 20px;
 }
 .grid-horizontal .card{
   display:grid;
@@ -541,27 +549,87 @@ footer {
   align-items:center;
 }
 .page-portfolio{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .page-portfolio h2{
 
-       display: block;
+  display: block;
   line-height: 1.1;
   color: var(--section-color);
   font-family: 'Montserrat', sans-serif;
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 700;
   text-align: left;
+}
+.page-portfolio h3{
+  color: var(--title);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
 .page-portfolio .subtitle{
     color: var(--text);
-    font-size: 18;
+    font-size: 25px;
     font-family: 'Raleway', sans-serif;
     padding-bottom: 20px;
 }
 
-.page-portfolio .card-content p {
-    margin-top: 10px;
+.page-portfolio p {
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--text);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+
+.card-short{
+   position: relative;
+  width:400px;
+  aspect-ratio: 9 / 16; /* formato verticale */
+  overflow: hidden;
+  border-radius: 10px; /* opzionale */
+}
+
+.card-short iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+
+.lightbox iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  color: var(--accent);
+  font-size: 32px;
+  cursor: pointer;
 }
