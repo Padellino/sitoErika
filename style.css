@@ -485,34 +485,36 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
-
-  background-image: url(images/sfondo_aboutme.png);
+  background: linear-gradient(rgba(0, 20, 40, 0.7), rgba(0, 20, 40, 0.7)),url(images/sfondo_aboutme.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 0;
 }
-
 .about-image {
-  flex: 1;
+   flex: 0 0 50%;
+  box-sizing: border-box;
 }
 
 .about-page-text {
   position: relative;
-  flex: 1;
+   flex: 0 0 50%;
+  box-sizing: border-box;
   font-family: 'Glacial Indifference', sans-serif;
   line-height: 1.8;
   font-size: 20px;
   margin-bottom: 20px;
   color: var(--text);
   text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 900px;
   display: block;
   object-fit: cover;
+  flex: 1;
 }
 
 
