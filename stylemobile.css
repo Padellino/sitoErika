@@ -1,0 +1,325 @@
+:root {
+  --bg: #001B0C;
+  --section-color: #FFD794;
+  --bg-contacts: #0F2139;
+  --title: #660A08;
+  --text-descrizione: #0F2139;
+  --text: #D2D2D2;
+}
+/* ================= SMALL DESKTOP ================= */
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 0 3%;
+  }
+
+  .card {
+    gap: 20px;
+  }
+
+  .card-content h3 {
+    font-size: 28px;
+  }
+
+  .card-content p {
+    font-size: 18px;
+  }
+
+  .showreel-content h2 {
+    font-size: 45px;
+  }
+
+  .about-text {
+    right: 10%;
+    width: 400px;
+  }
+
+  .grid-horizontal .card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    max-width: 90%;
+  }
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+
+  /* Bottone visibile */
+  .nav-toggle {
+    display: block;
+    font-size: 30px;
+    background: transparent;
+    color: var(--text);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Contenitore nav */
+  .nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Link inizialmente nascosti sotto il bottone */
+  .nav-links {
+    display: flex;
+    flex-direction: column;    /* verticale */
+    width: 100%;               /* occupa tutta la larghezza */
+    max-height: 0;             /* chiuso */
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 5px;           /* piccolo spazio sotto il bottone */
+  }
+
+  /* Link visibili quando attivo */
+  .nav-links.active {
+    max-height: 500px;         /* abbastanza per tutti i link */
+  }
+
+  /* Link stile verticale */
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 16px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: var(--section-color);
+  }
+
+  /* HERO */
+  .video-hero {
+    height: 45vh;
+  }
+
+  .video-content h2 {
+    font-size: 32px;
+  }
+
+  /* SHOWREEL */
+  .showreel-content h2 {
+    font-size: 36px;
+  }
+
+  /* CARDS */
+  .card {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .card.reverse {
+    flex-direction: column;
+  }
+
+  .card-content h3 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .card-content p {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .card img {
+    max-height: 400px;
+  }
+
+  /* ABOUT */
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-page-text {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .about-btn {
+    width: 60%;
+  }
+
+  /* PORTFOLIO */
+  .grid-vertical {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-horizontal .card {
+    grid-template-columns: 1fr;
+  }
+
+  .page-portfolio h2 {
+    font-size: 36px;
+  }
+
+  /* WEDDING */
+  .page-wedding-section h2 {
+    font-size: 36px;
+  }
+
+  .page-wedding-section p {
+    font-size: 18px;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .contact-info {
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+
+     .home {
+    background-position: right top;   /* sposta l’immagine verso sinistra e in alto */
+    background-size: cover;          /* mantiene la copertura */
+  }
+  .about .about-wrapper{
+    background: none;
+  }
+  /* NAVBAR */
+  .logo img {
+    height: 30px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .video-hero {
+    height: 35vh;
+  }
+
+  .video-content h2 {
+    font-size: 24px;
+  }
+
+  /* SHOWREEL */
+  .showreel-content h2 {
+    font-size: 28px;
+  }
+
+  .showreel-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* CARDS */
+  .card {
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .card-content h3 {
+    font-size: 22px;
+  }
+
+  .card-content p {
+    font-size: 15px;
+  }
+
+  .card img {
+    max-height: 250px;
+  }
+
+  /* ABOUT */
+  .about-title {
+    font-size: 26px;
+  }
+
+  .about-page-text {
+    font-size: 15px;
+  }
+
+  .about-btn {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  /* PORTFOLIO */
+  .page-portfolio h2 {
+    font-size: 28px;
+  }
+
+  .page-portfolio h3 {
+    font-size: 22px;
+  }
+
+  .page-portfolio p {
+    font-size: 15px;
+  }
+
+  .card-short {
+    width: 100%;
+  }
+
+  /* WEDDING */
+  .page-wedding-section h2 {
+    font-size: 28px;
+  }
+
+  .page-wedding-section p {
+    font-size: 15px;
+  }
+
+  /* CONTACT */
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-container {
+    max-width: 95%;
+    gap: 20px;
+  }
+
+  .contact-info {
+    font-size: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.75rem;
+  }
+}

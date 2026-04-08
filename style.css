@@ -84,19 +84,22 @@ footer {
 }
 
 .nav-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
+  display: none;              /* visibile solo su mobile/tablet */
+  font-size: 28px;             /* abbastanza grande da cliccare */
+  background: transparent; /* colore di sfondo del bottone */
+  color: var(--text);         /* colore icona ☰ */
   border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
   cursor: pointer;
-  color: var(--text);
+  z-index: 1001;               /* sopra tutto */
 }
 
 .nav-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .logo img {
@@ -742,11 +745,10 @@ footer {
 
 
 /* CONTACTS */
-
-.contacts-body {
+/*
+.contacts-body{
   background-color: var(--bg-contacts);
-}
-
+}*/
 .contact-section {
   margin-top: 10%;
   height: 100vh;
@@ -754,32 +756,67 @@ footer {
   font-family: 'Glacial Indifference', sans-serif;
   align-items: center;
 }
-
+.contact-title{
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  color: var(--title); 
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 700;
+}
 .contact-container {
   display: flex;
   gap: 80px;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 70%;
+  height: 60vh;
+  margin: auto;
   flex-wrap: wrap;
+  padding-bottom: 20px;
+  background-color: var(--bg-contacts);
 }
 
 .contact-form {
   flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 15px;
-  background-color: white;
+  padding-left: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 40px;
   width: 100%;
   box-sizing: border-box;
+  background-color: transparent;
+  
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 12px;
+  color: var(--text);
 }
 
+
+.contact-form textarea{
+  
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+   flex: 1;            
+  min-height: 120px;   
+  resize: none;
+
+  
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 12px;
+  color: var(--text);
+}
 .contact-form button {
   padding: 10px 20px;
   border: none;
@@ -787,6 +824,10 @@ footer {
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
+}
+.contact-form h3{
+  font-size: 20px;
+  color: var(--text);
 }
 
 /* Contatti a destra */
