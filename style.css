@@ -504,7 +504,7 @@ footer {
    flex: 0 0 50%;
   box-sizing: border-box;
   font-family: 'Glacial Indifference', sans-serif;
-  line-height: 1.8;
+  line-height: 1.1;
   font-size: 20px;
   margin-bottom: 20px;
   color: var(--text);
@@ -745,10 +745,10 @@ footer {
 
 
 /* CONTACTS */
-/*
+
 .contacts-body{
   background-color: var(--bg-contacts);
-}*/
+}
 .contact-section {
   margin-top: 10%;
   height: 100vh;
@@ -772,7 +772,7 @@ footer {
   margin: auto;
   flex-wrap: wrap;
   padding-bottom: 20px;
-  background-color: var(--bg-contacts);
+  background-color: white;
 }
 
 .contact-form {
