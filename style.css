@@ -43,7 +43,7 @@ body {
 }
 
 .home {
-  background: url("images/SfondoSito.png") center / cover no-repeat;
+  background: url("images/SfondoSito.jpg") center / cover no-repeat;
   background-position: center 100%;
 }
 
@@ -345,7 +345,8 @@ footer {
 
 .card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 30px;
   padding-top: 0;
   margin: 0;
@@ -385,6 +386,16 @@ footer {
   color: var(--text);
 }
 
+.card-reel{
+  flex:1;
+}
+.card-reel img{
+
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  height: 400px;
+}
 .card-content {
   flex: 1;
 }
@@ -411,7 +422,7 @@ footer {
 .play-icon {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   font-size: 100px;
   color: var(--title);
@@ -420,6 +431,10 @@ footer {
   transition: transform 0.3s, opacity 0.3s;
 }
 
+.play-icon-reel {
+  left:15%;
+  font-size: 80px;
+}
 
 .about-text {
   position: absolute;
@@ -650,7 +665,6 @@ footer {
 }
 
 .grid-horizontal .card {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
