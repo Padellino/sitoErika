@@ -43,7 +43,7 @@ body {
 }
 
 .home {
-  background: url("images/SfondoSito.jpg") center / cover no-repeat;
+  background: url("images/5000px.png") center / cover no-repeat;
   background-position: center 100%;
 }
 
@@ -83,6 +83,9 @@ footer {
   background-color: transparent;
 }
 
+.nav-background{
+  background-color: var(--text-descrizione) !important;
+}
 .nav-toggle {
   display: none;              /* visibile solo su mobile/tablet */
   font-size: 28px;             /* abbastanza grande da cliccare */
@@ -394,7 +397,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   width: auto;
-  height: 400px;
+  height: 355px;
 }
 .card-content {
   flex: 1;
@@ -622,7 +625,7 @@ footer {
   line-height: 1.1;
   color: var(--title);
   font-family: 'Tenor Sans', sans-serif;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 700;
   text-align: center;
   position: relative;
