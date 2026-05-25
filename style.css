@@ -43,7 +43,7 @@ body {
 }
 
 .home {
-  background: url("images/5000px.png") center / cover no-repeat;
+  background: url("images/5000px.webp") center / cover no-repeat;
   background-position: center 100%;
 }
 
@@ -397,7 +397,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   width: auto;
-  height: 355px;
+  height: 337px;
 }
 .card-content {
   flex: 1;

@@ -17,6 +17,12 @@
     gap: 20px;
   }
 
+  .card-content{
+    order: 1;
+  }
+  .card-image{
+    order: 2;
+  }
   .card-content h3 {
     font-size: 28px;
   }
@@ -40,6 +46,15 @@
 
   .contact-container {
     max-width: 90%;
+  }
+  .play-icon{
+    font-size: 70px;
+      top: 50%;
+    left: 50%;
+  }
+
+  .about-text{
+    margin-top: 30%;
   }
 }
 
